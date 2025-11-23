@@ -12,6 +12,6 @@ int main() {
   void (*pfn)(int, char) = &Print; // & is optionnal
   (*pfn)(8, '@');
   pfn(5, '*');
-  atexit(EndMessage);
+  atexit(EndMessage); // sometimes internal functions use function pointers
   return 0;
 }
